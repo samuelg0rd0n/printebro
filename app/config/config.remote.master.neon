@@ -1,0 +1,21 @@
+parameters:
+	database:
+		port: 3306
+		host: 127.0.0.1
+		user: *******
+		password: ********
+		dbname: sandbox_test
+
+	mailer:
+		smtp: true
+		host: smtp.sparkpostmail.com
+		port: 587
+		username: SMTP_Injection
+		password: **************************
+		secure: tls
+		singleRecipient: 'sandbox@appsdevteam.com'
+
+	oneSky:
+		apiKey: ******************
+		apiSecret: *******************
+		projectId: ******

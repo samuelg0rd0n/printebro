@@ -1,0 +1,42 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# http://nette.org/security-warning
+#
+parameters:
+	dataDir: %wwwDir%/data
+	reportSender: adam@appsdevteam.com
+	versionMacro:
+		htdeployment: '%appDir%/../.htdeployment'
+		timestampFile: '%wwwDir%/index.php'
+
+php:
+	date.timezone: Europe/Prague
+
+tracy:
+	email: "adam@appsdevteam.com"
+
+application:
+	errorPresenter: Web:Error
+	mapping:
+		*:
+			- App\Modules
+			- *Module
+			- *\*Presenter
+	scanDirs: no
+
+latte:
+	macros:
+		- @\ADT\Latte\Macros\VersionMacro::install
+
+session:
+	autoStart: true
+	expiration: 14 days
+	save_path: %appDir%/../sessions
+
+services:
+	routerFactory: App\Router\RouterFactory
+	router: @routerFactory::createRouter
+	- ADT\Latte\Macros\VersionMacro(%versionMacro%, %appDir%)
+
+extensions:
+	console: Kdyby\Console\DI\ConsoleExtension

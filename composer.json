@@ -1,0 +1,62 @@
+{
+	"name": "nette/web-project",
+	"description": "Nette: Standard Web Project",
+	"type": "project",
+	"license": ["MIT", "BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"require": {
+		"php": ">= 5.6",
+		"nette/application": "^2.4",
+		"nette/bootstrap": "^2.4.2",
+		"nette/caching": "^2.5",
+		"nette/database": "^2.4",
+		"nette/di": "^2.4",
+		"nette/finder": "^2.4",
+		"nette/forms": "^2.4",
+		"nette/http": "^2.4",
+		"nette/mail": "^2.4",
+		"nette/robot-loader": "^2.4",
+		"nette/security": "^2.4",
+		"nette/utils": "^2.4",
+		"latte/latte": "^2.4",
+		"tracy/tracy": "^2.4",
+		"nette/neon": "^2.4",
+		"kdyby/doctrine": "^3.1",
+		"gedmo/doctrine-extensions": "^2.4",
+		"majkl578/nette-identity-doctrine": "v2.3-rc1",
+		"beberlei/DoctrineExtensions": "^1.0",
+		"zenify/doctrine-migrations": "^2.1",
+		"kdyby/autowired": "^1.3",
+		"kdyby/translation": "^2.4@dev",
+		"adt/version-macro": "^3.1",
+		"adt/bulk-fetcher": "^1.0",
+		"adt/onesky": "^1.2",
+		"adt/after-deploy": "^3.3",
+		"adt/query-object-data-source": "^1.2",
+		"dg/ftp-php": "^1.2",
+		"ublaboo/datagrid": "^5.0",
+		"adt/mailer": "^3.0",
+		"adt/single-recipient-mailer": "^3.2",
+		"adt/configurator": "^3.0",
+		"rixxi/gedmo": "^1.0",
+		"kdyby/forms-replicator": "@dev",
+		"kdyby/validator": "@dev",
+		"kdyby/doctrine-forms": "^3.1",
+		"adt/tracy-git": "^1.0",
+		"kdyby/redis": "^3.5",
+		"voda/date-input": "^1.1",
+		"dg/ftp-deployment": "^2.9"
+	},
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/AppsDevTeam/DoctrineForms.git"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/AppsDevTeam/Redis.git"
+		}
+	],
+	"require-dev": {
+		"codeception/codeception": "^2.2"
+	}
+}

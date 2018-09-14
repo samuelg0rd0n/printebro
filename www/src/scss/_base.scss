@@ -1,0 +1,137 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, .h1 {
+  font-weight: $font-weight-light;
+  font-size: $font-size-base * 2;
+}
+h2, .h2 {
+  font-weight: $font-weight-bold;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.logo {
+  width: 280px;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+@keyframes hovering-arrow {
+  0% {
+    transform: translateY(0);
+    color: $blue;
+  }
+  12% {
+    transform: translateY(-20px);
+    color: $blue;
+  }
+  25% {
+    transform: translateY(0);
+    color: $red;
+  }
+  37% {
+    transform: translateY(-20px);
+    color: $red;
+  }
+  50% {
+    transform: translateY(0);
+    color: $yellow;
+  }
+  62% {
+    transform: translateY(-20px);
+    color: $yellow;
+  }
+  75% {
+    transform: translateY(0);
+    color: $black;
+  }
+  87% {
+    transform: translateY(-20px);
+    color: $black;
+  }
+  100% {
+    transform: translateY(0);
+    color: $blue;
+  }
+}
+.hero__arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  line-height: 48px;
+  animation: hovering-arrow 7s infinite;
+}
+
+.hero-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+  z-index: 100;
+}
+.hero-animation--start {
+  .hero-animation__bar {
+    animation: hero-animation 0.6s ease-in-out forwards;
+  }
+  .hero-animation__bar--1 {
+    animation-delay: 0.5s;
+  }
+  .hero-animation__bar--2 {
+    animation-delay: 0.6s;
+  }
+  .hero-animation__bar--3 {
+    animation-delay: 0.7s;
+  }
+  .hero-animation__bar--4 {
+    animation-delay: 0.8s;
+  }
+}
+.hero-animation__bar {
+  flex: 1;
+  height: 100%;
+}
+
+
+@keyframes hero-animation {
+  0% {
+	height: 100%;
+	opacity: 1
+  }
+  100% {
+	height: 0;
+	opacity: 0.2;
+  }
+}
+
+.img-thumbnail {
+  display: block;
+}
+.img-thumbnail__img {
+  background-size: cover;
+  &:after {
+    content: '';
+    padding-top: 100%;
+    display: block;
+  }
+}
+
+.lg-outer .lg-item {
+  background: url("../images/loading.gif") no-repeat scroll center center transparent;
+}

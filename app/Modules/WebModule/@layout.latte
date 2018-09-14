@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Nabízíme plnobarevný tisk (ofsetový i digitální), dokončovací zpracování, knihařské zpracování, billboardy, polepy a spoustu dalšího (od 1 ks po tisíce)." />
+	<meta name="keywords" content="tisk, ofsetový, digitální, knihařské zpracování, Bzenec, dokončovací zpracování, billboardy, letáky, katalogy, brožury, samolepky" />
+
+	<meta property="og:url" content="http://www.printebro.cz/">
+	<meta property="og:title" content="Printebro - Jsme tu pro vás a vaše tiskoviny">
+	<meta property="og:description" content="Nabízíme plnobarevný tisk (ofsetový i digitální), dokončovací zpracování, knihařské zpracování, billboardy, polepy a spoustu dalšího (od 1 ks po tisíce).">
+	<meta property="og:image" content="http://www.printebro.cz/android-chrome-384x384.png">
+	<meta property="og:image:width" content="384">
+	<meta property="og:image:height" content="384">
+	<meta property="og:type" content="website">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,700&amp;subset=latin-ext" rel="stylesheet">
+
+	<title>{ifset title}{include title|stripHtml} | {/ifset}Printebro - Jsme tu pro vás a vaše tiskoviny</title>
+
+	{block head}{/block}
+
+	<link rel="stylesheet" href="{$basePath}/dist/css/app.css{v}">
+
+	<script src="{$basePath}/dist/js/jquery.js"></script>
+</head>
+
+<body>
+	{snippet flashes}
+		<div n:foreach="$flashes as $flash" n:class="alert, 'alert-' . $flash->type">{$flash->message}</div>
+	{/snippet}
+
+	{include content}
+
+	{block scripts}
+
+		{* JS COMPONENTS *}
+		<script src="{$basePath}/dist/js/app.js{v}"></script>
+
+		{ifset componentJs}{include componentJs}{/ifset}
+	{/block}
+</body>
+</html>
